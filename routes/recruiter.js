@@ -6,6 +6,7 @@ router.get('/sign-up',recruiterController.signUp);
 
 router.get('/sign-in',recruiterController.signIn);
 
+router.post('/create',recruiterController.create);
 console.log('recruiter router is working....');
 module.exports=router;
 
