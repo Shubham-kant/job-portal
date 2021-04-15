@@ -1,12 +1,20 @@
 const express=require('express');
 const router=express.Router();
+const passport = require('passport');
 const recruiterController=require('../controllers/recruiter_controller.js');
 
 router.get('/sign-up',recruiterController.signUp);
-
+router.get('/profile',passport.checkAuthentication,recruiterController.profile)
 router.get('/sign-in',recruiterController.signIn);
 
 router.post('/create',recruiterController.create);
+// use passport as a middleware to authenticate
+router.post('/create-session',passport.authenticate(
+    'local',
+    {
+        failureRedirect:'/recruiter/sign-in'
+    },
+) ,recruiterController.createSession);
 console.log('recruiter router is working....');
 module.exports=router;
 

@@ -10,6 +10,7 @@ const db=require('./config/mongoose');
 const session=require('express-session');
 const passport=require('passport');
 const candidatepassportLocal=require('./config/candidate-passport-local-strategy');
+// const recruiterpassportLocal=require('./config/recruiter-passport-local-strategy');
 // const MongoStore=require('connect-mongo')(session);
 //importing connect-mongo module and specifically a arguement named 'session'. 
 // const MongoStore=require('connect-mongo')(session);
@@ -49,7 +50,8 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(passport.setAuthenticatedCandidate);
+app.use(passport.setAuthenticatedUser);
+
 app.use('/',require('./routes'));
 app.listen(port,function(err){
     if(err){

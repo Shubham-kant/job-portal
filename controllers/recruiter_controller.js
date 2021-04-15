@@ -1,9 +1,19 @@
 const Recruiter=require('../models/recruiter');
 
+
+module.exports.profile = function(req, res){
+    return res.render('recruiter_profile');
+}
 module.exports.signUp=function(req,res){
+    if(req.isAuthenticated()){
+        return res.redirect('/recruiter/profile');
+    }
     return res.render('recruiter_signup');
 }
 module.exports.signIn=function(req,res){
+    if(req.isAuthenticated()){
+        return res.redirect('/recruiter/profile');
+    }
     return res.render('recruiter_signin');
 }
 module.exports.create=function(req,res){
@@ -29,3 +39,7 @@ module.exports.create=function(req,res){
         }
     })
 }
+//signin
+module.exports.createSession=function(req,res){
+    return res.redirect('/');
+} 
