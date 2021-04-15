@@ -1,4 +1,4 @@
-<h1><%= recruiter.company %><h1>
+<h1><%= recruiter.companyname %><h1>
 <h1><%= recruiter.name%></h1>
     <h1><%= recruiter.email%></h1>
 
@@ -6,9 +6,29 @@
     <section id="job-post-section">
         <h1>Post a Job</h1>
         <form action="jobpost/create/<%= locals.recruiter._id %>" method="POST">
+            <input type="text" name="jobposition">
             <textarea name="content" cols="30" rows="10"></textarea>
             <input type="submit" value="Post" >
         </form>
+    </section>
+    <section id="job-list">
+        <div id="our-company-jobs">
+            <h1>Available Jobs of <%= recruiter.companyname %></h1>
+            <ul>
+                <%  for(var i of jobs ){ %>
+                    <% if( locals.recruiter.id ==  i.recruiter.id  ){ %>
+                        <li>
+                            <a href="jobpost/description/<%= i._id %>">
+                                <p><%= i.position %></p>
+                            </a>
+                            
+                            <p><%= i.content %></p>
+                            
+                        </li>
+                    <% } %>
+                <% } %>
+        </ul>
+        </div>
     </section>
 
 

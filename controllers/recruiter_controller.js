@@ -1,8 +1,18 @@
 const Recruiter=require('../models/recruiter');
-
+const Job=require('../models/job');
 
 module.exports.profile = function(req, res){
-    return res.render('recruiter_profile');
+    Job.find({}).populate('recruiter').exec(function(err,jobs){
+        if(err){
+            console.log('error in finding company jobs',err);
+            return;
+        }
+
+        return res.render('recruiter_profile',{
+            jobs:jobs
+        });
+    });
+    // return res.render('recruiter_profile');
 }
 module.exports.signUp=function(req,res){
     if(req.isAuthenticated()){

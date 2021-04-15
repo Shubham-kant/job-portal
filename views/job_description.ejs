@@ -1,0 +1,18 @@
+<h1><%= job.recruiter.companyname %></h1>
+
+<h2>
+    <%= job.position %>
+</h2>
+<p><%= job.content %></p>
+<!-- <a href="appl"> -->
+    <% if( locals.candidate ){ %>
+        <form action="/recruiter/jobpost/apply/?id1=<%= locals.candidate.id %>&id=<%= job.id %>" method="POST">
+            <button>apply</button>
+        </form>
+        
+            
+    
+
+    <% } %>
+    
+</a>

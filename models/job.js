@@ -1,6 +1,10 @@
 const mongoose=require('mongoose');
 
 const jobSchema=new mongoose.Schema({
+    position:{
+        type:String,
+        required:true
+    },
     content:{
         type:String,
         required:true
