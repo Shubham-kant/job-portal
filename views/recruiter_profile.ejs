@@ -1,2 +1,17 @@
+<h1><%= recruiter.company %><h1>
 <h1><%= recruiter.name%></h1>
     <h1><%= recruiter.email%></h1>
+
+<section id="job-section">
+    <section id="job-post-section">
+        <h1>Post a Job</h1>
+        <form action="jobpost/create/<%= locals.recruiter._id %>" method="POST">
+            <textarea name="content" cols="30" rows="10"></textarea>
+            <input type="submit" value="Post" >
+        </form>
+    </section>
+
+
+
+
+</section>
