@@ -7,14 +7,22 @@
     <section id="job-post-section">
         <h1>Post a Job</h1>
         <form action="jobpost/create/<%= locals.recruiter._id %>" method="POST">
-            <input type="text" name="jobposition">
-            <textarea name="content" cols="50" rows="10"></textarea>
-            <input type="submit" value="Post" >
+            <div>
+                <label for="jobposition">Job position</label>
+                <input type="text" id="jobposition" name="jobposition">
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea name="content" id="description" cols="50" rows="10"></textarea>
+            </div>
+        
+                <input type="submit" value="Post" >
+            
         </form>
     </section>
     <section id="job-list">
         <div id="our-company-jobs">
-            <h1>Available Jobs of <%= recruiter.companyname %></h1>
+            <h1>Available Jobs at <%= recruiter.companyname %></h1>
             <ul>
                 <%  for(var i of jobs ){ %>
                     <% if( locals.recruiter.id ==  i.recruiter.id  ){ %>
@@ -41,8 +49,4 @@
         </ul>
         </div>
     </section>
-
-
-
-
 </section>
