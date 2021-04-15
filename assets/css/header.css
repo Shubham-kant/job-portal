@@ -1,2 +1,29 @@
-section {
-  background-color: pink; }
+body a {
+  cursor: pointer; }
+
+body #header-section {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box; }
+  body #header-section #sign-links {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box; }
+  body #header-section button {
+    cursor: pointer;
+    margin-left: 1rem;
+    padding: 0.5rem; }
+  body #header-section #candidate-profile-btn button {
+    background-color: transparent;
+    margin-left: 10px;
+    color: palevioletred; }
+  body #header-section #recruiter-profile-btn button {
+    background-color: transparent;
+    margin-left: 10px; }
+  body #header-section #sign-out-btn button {
+    margin-left: 10px; }
+  body #header-section #sign-up-btn button {
+    background-color: transparent;
+    margin-left: 10px; }
+  body #header-section #sign-in-btn button {
+    margin-left: 10px; }
