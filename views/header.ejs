@@ -1,1 +1,47 @@
-<header>this is header</header>
+<section id="header-section">
+    <div id="app-name">
+        <a href="/"><h2>Home</h2></a>
+        
+    </div>
+   
+    
+
+    <div id="sign-links">
+        <% if(locals.candidate){ %>
+             
+           
+            <div id="candidate-profile-btn">
+                <a href="/candidate/profile"><button><%= candidate.name %></button></a>
+            </div>
+            <div id="sign-out-btn">
+                <a href="/candidate/sign-out"><button>signout</button></a>
+            </div>
+            
+        <% }else if(locals.recruiter){ %>
+            
+            <div id="recruiter-profile-btn">
+                <a href="/recruiter/profile"><button><%= recruiter.name %></button></a>
+            </div>
+            <div id="sign-out-btn">
+                <a href="/recruiter/sign-out"><button>signout</button></a>
+            </div>
+        
+        <% }else{ %>
+            <div id="sign-up-btn">
+                <a href="/candidate/sign-up"> <button>candidate Sign up</button> </a>
+            </div>
+            <div id="sign-in-btn">
+                <a href="/candidate/sign-in"><button>candidate Sign in</button></a>
+            </div>
+            <div id="sign-up-btn">
+                <a href="/recruiter/sign-up"> <button>recruiter Sign up</button> </a>
+            </div>
+            <div id="sign-in-btn">
+                <a href="/recruiter/sign-in"><button>recruiter Sign in</button></a>
+            </div>
+        <% } %>
+
+    </div>
+    
+
+</section>
