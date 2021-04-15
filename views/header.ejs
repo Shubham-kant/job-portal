@@ -12,7 +12,7 @@
              
            
             <div id="candidate-profile-btn">
-                <a href="/candidate/profile"><button><%= candidate.name %></button></a>
+                <a href="/candidate/profile/<%= locals.candidate._id %>"><button><%= candidate.name %></button></a>
             </div>
             <div id="sign-out-btn">
                 <a href="/candidate/sign-out"><button>signout</button></a>

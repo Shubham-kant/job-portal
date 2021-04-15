@@ -2,7 +2,13 @@ const Recruiter=require('../models/recruiter');
 const Job=require('../models/job');
 
 module.exports.profile = function(req, res){
-    Job.find({}).populate('recruiter').exec(function(err,jobs){
+    Job.find({})
+    .populate('recruiter')
+    //populated candidate of job also
+    .populate({
+        path:'candidate'
+    })
+    .exec(function(err,jobs){
         if(err){
             console.log('error in finding company jobs',err);
             return;

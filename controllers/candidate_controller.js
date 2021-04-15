@@ -2,7 +2,14 @@ const Candidate=require('../models/candidate');
 
 
 module.exports.profile=function(req,res){
-    return res.render('candidate_profile');
+    // return res.render('candidate_profile');
+    Candidate.findById(req.params.id,function(err,candidate){
+        return res.render('candidate_profile', {
+            
+            profile_candidate:candidate
+
+        });
+    });
 
 
 
@@ -15,7 +22,7 @@ module.exports.signUp=function(req,res){
 }
 module.exports.signIn=function(req,res){
     if(req.isAuthenticated()){
-        return res.redirect('/candidate/profile');
+        return res.redirect('/candidate/profile/');
     }
     return res.render('candidate_signin');
 }

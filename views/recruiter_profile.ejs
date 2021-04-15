@@ -1,13 +1,14 @@
-<h1><%= recruiter.companyname %><h1>
-<h1><%= recruiter.name%></h1>
-    <h1><%= recruiter.email%></h1>
+<h1>Recruiter  Profile</h1>
+<h2><%= recruiter.companyname %><h2>
+<h2><%= recruiter.name%></h2>
+    <h2><%= recruiter.email%></h2>
 
 <section id="job-section">
     <section id="job-post-section">
         <h1>Post a Job</h1>
         <form action="jobpost/create/<%= locals.recruiter._id %>" method="POST">
             <input type="text" name="jobposition">
-            <textarea name="content" cols="30" rows="10"></textarea>
+            <textarea name="content" cols="50" rows="10"></textarea>
             <input type="submit" value="Post" >
         </form>
     </section>
@@ -19,11 +20,21 @@
                     <% if( locals.recruiter.id ==  i.recruiter.id  ){ %>
                         <li>
                             <a href="jobpost/description/<%= i._id %>">
-                                <p><%= i.position %></p>
+                                <h4><%= i.position %></h4>
                             </a>
-                            
                             <p><%= i.content %></p>
-                            
+                            <div id="">
+                                <h5>Candidates applied to above job</h5>
+                                <% for(var can of i.candidate){ %>
+                                
+                                        <a href="/candidate/profile/<%= can._id %>">
+                                            <p>  <%= can.name %></p>
+                                        </a>
+                                        
+
+                                    
+                                <% } %>
+                            </div>
                         </li>
                     <% } %>
                 <% } %>
