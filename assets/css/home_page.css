@@ -1,15 +1,21 @@
 body #home-page #job-list #job-container #job-post-list {
-  border: 1px solid #e4e7f0;
-  background-color: transparent;
   font-family: sans-serif;
   list-style-type: none; }
   body #home-page #job-list #job-container #job-post-list #job-post {
+    border: 1px solid #e4e7f0;
+    background-color: transparent;
+    margin-bottom: 0.5rem;
     display: flex;
     flex-direction: column; }
     body #home-page #job-list #job-container #job-post-list #job-post a #position {
+      margin-left: 0.5rem;
       text-decoration: none;
       font-weight: bold; }
     body #home-page #job-list #job-container #job-post-list #job-post a #view-details {
-      font-size: 0.7rem; }
+      font-size: 0.7rem;
+      margin-left: 0.5rem; }
+    body #home-page #job-list #job-container #job-post-list #job-post #content {
+      margin-left: 0.5rem; }
     body #home-page #job-list #job-container #job-post-list #job-post #company {
-      margin-top: -0.8rem; }
+      margin-top: -0.8rem;
+      margin-left: 0.5rem; }
