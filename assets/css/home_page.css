@@ -1,3 +1,15 @@
-h1{
-    color:blue;
-}
+body #home-page #job-list #job-container #job-post-list {
+  border: 1px solid #e4e7f0;
+  background-color: transparent;
+  font-family: sans-serif;
+  list-style-type: none; }
+  body #home-page #job-list #job-container #job-post-list #job-post {
+    display: flex;
+    flex-direction: column; }
+    body #home-page #job-list #job-container #job-post-list #job-post a #position {
+      text-decoration: none;
+      font-weight: bold; }
+    body #home-page #job-list #job-container #job-post-list #job-post a #view-details {
+      font-size: 0.7rem; }
+    body #home-page #job-list #job-container #job-post-list #job-post #company {
+      margin-top: -0.8rem; }

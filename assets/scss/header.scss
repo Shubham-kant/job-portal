@@ -23,8 +23,11 @@ body{
                 
                 //border:1px solid transparent;
                 background-color:transparent;
+                // background-color:#345beb;
                 margin-left:10px;
-                color:palevioletred
+                // color:palevioletred;
+                border:1px solid #345beb;
+                color:#345beb;
             }
 
         }
@@ -33,6 +36,8 @@ body{
               
                 //border:1px solid transparent;
                 background-color:transparent;
+                border:1px solid #345beb;
+                color:#345beb;
                 margin-left:10px;
                
             }
@@ -41,8 +46,10 @@ body{
         #sign-out-btn{
             button{
                
-                //border:1px solid transparent;
-               
+                border:1px solid transparent;
+                background-color:#345beb;
+                
+                color:white;
                 margin-left:10px;
                 
             }
@@ -53,7 +60,9 @@ body{
             
                 background-color:transparent;
                 //background-color: #ec5252;
-                //border:1px solid transparent;
+                border:1px solid #345beb;
+                color:#345beb;
+                // border:#345beb
                 margin-left:10px;
              
                 
@@ -64,7 +73,10 @@ body{
             button{
                
                 //border:1px solid transparent;
-               
+                border:1px solid transparent;
+                background-color:#345beb;
+                
+                color:white;
                 margin-left:10px;
                 
             }

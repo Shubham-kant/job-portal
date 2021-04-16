@@ -1,28 +1,32 @@
 <link rel="stylesheet" href="/css/home_page.css">
-        <Section>
+        <Section id="home-page">
                 <!-- <section> -->
-                <section id="jobs">
+                <section id="job-list">
                         <h1>Available Jobs</h1>
-                        <div id="">
-                                <ul>
-                                        <%  for(var i of jobs ){ %>
-                                                <li>
-                                                        <a href="recruiter/jobpost/description/<%= i._id %>">
-                                                        <p><%= i.position %></p>
+                        <div id="job-container">
+                                <ul id="job-post-list">
+                                <%  for(var i of jobs ){ %>
+                                        <li id="job-post">
+                                                <a href="recruiter/jobpost/description/<%= i._id %>">
+                                                <p id="position"><%= i.position %></p>
+                                                </a>
+                                                <p id="company"><%= i.recruiter.companyname %></p>
+                                                <p id="content"><%= i.content %></p>
+                                                <a href="recruiter/jobpost/description/<%= i._id %>">
+                                                        <p id="view-details">View Details ></p>
                                                         </a>
-                                                        <p><%= i.recruiter.companyname %></p>
-                                                        <p><%= i.content %></p>
+
                                                         <!-- <a href="recruiter/jobpost/description/<%= i._id %>/apply"> -->
                                                         <!-- <button>apply</button>
                                                          -->
                                                         
-                                                        </a>
-                                                </li>
-                                        <% } %>
-                                </ul>
+                                                </a>
+                                        </li>
+                                <% } %>
+                        </ul>
                         </div>
 
-                        </section>
+                </section>
         </Section>
    
 

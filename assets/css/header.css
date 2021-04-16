@@ -16,14 +16,25 @@ body #header-section {
   body #header-section #candidate-profile-btn button {
     background-color: transparent;
     margin-left: 10px;
-    color: palevioletred; }
+    border: 1px solid #345beb;
+    color: #345beb; }
   body #header-section #recruiter-profile-btn button {
     background-color: transparent;
+    border: 1px solid #345beb;
+    color: #345beb;
     margin-left: 10px; }
   body #header-section #sign-out-btn button {
+    border: 1px solid transparent;
+    background-color: #345beb;
+    color: white;
     margin-left: 10px; }
   body #header-section #sign-up-btn button {
     background-color: transparent;
+    border: 1px solid #345beb;
+    color: #345beb;
     margin-left: 10px; }
   body #header-section #sign-in-btn button {
+    border: 1px solid transparent;
+    background-color: #345beb;
+    color: white;
     margin-left: 10px; }
